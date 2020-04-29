@@ -4,6 +4,8 @@
 /tcl
 /datasets
 /logdir/train/*
+/logdir_pretrained
+/samplernn-env
 pip-selfcheck.json
 __pycache__
 *.wav
