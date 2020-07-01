@@ -6,3 +6,8 @@ Installation:
     source samplernn-env/bin/activate
     pip3 install --upgrade pip
     pip3 install -r requirements.txt
+
+Running:
+
+    source samplernn-env/bin/activate
+    sh run.sh

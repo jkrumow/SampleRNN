@@ -19,7 +19,7 @@ def randomize_files(files):
         yield files[files_idx[idx]]
 
 
-def find_files(directory, pattern='*.wav'):
+def find_files(directory, pattern='*.mp3'):
     '''Recursively finds all files matching the pattern.'''
     files = []
     for root, dirnames, filenames in os.walk(directory):
@@ -41,7 +41,7 @@ def load_generic_audio(directory, sample_rate):
 
 def trim_silence(audio, threshold):
     '''Removes silence at the beginning and end of a sample.'''
-    energy = librosa.feature.rmse(audio)
+    energy = librosa.feature.rms(audio)
     frames = np.nonzero(energy > threshold)
     indices = librosa.core.frames_to_samples(frames)[1]
 
